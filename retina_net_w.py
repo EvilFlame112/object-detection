@@ -19,11 +19,11 @@ detector = VideoObjectDetection()
 #to use TinyYolo model
 detector.setModelTypeAsTinyYOLOv3()
 
-detector.setModelPath( os.path.join(execution_path , "models/tiny-yolov3.pt"))
+detector.setModelPath(os.path.join(execution_path , "models/tiny-yolov3.pt"))
 detector.loadModel()
 
-video_path = detector.detectObjectsFromVideo(input_file_path=os.path.join(execution_path, "videos/00abd8a7-ecd6fc56.mov"),
-                            output_file_path=os.path.join(execution_path, "traffic_detected_retinanet")
+video_path = detector.detectObjectsFromVideo(input_file_path=os.path.join(execution_path, "videos/00adbb3f-7757d4ea.mov"),
+                            output_file_path=os.path.join(execution_path, "traffic_detected_retinanet1")
                             , frames_per_second=10, log_progress=True)
 print(video_path)
 
