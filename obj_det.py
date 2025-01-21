@@ -1,9 +1,10 @@
 ## In cmd with image source
 # yolo detect predict model=yolo11n.pt source='images/demo.png'
+
 from ultralytics import YOLO
 
 # Load a model
-model = YOLO("models/yolo11n.pt")
+model = YOLO("models/yolov8s.pt")
 
 # Train the model
 train_results = model.train(
@@ -17,7 +18,7 @@ train_results = model.train(
 metrics = model.val()
 
 # Perform object detection on an image
-results = model("images/vehicles.jpg")
+results = model("images/crowd3.jpg")
 results[0].show()
 
 # Export the model to ONNX format
