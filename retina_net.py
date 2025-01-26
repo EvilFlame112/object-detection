@@ -17,8 +17,8 @@ if __name__ == "__main__":
     execution_path = os.getcwd()
 
     detector = VideoObjectDetection()
-    detector.setModelTypeAsTinyYOLOv3()
-    detector.setModelPath(os.path.join(execution_path , "models/tiny-yolov3.pt"))
+    detector.setModelTypeAsRetinaNet()
+    detector.setModelPath(os.path.join(execution_path , "models/retinanet_resnet50_fpn_coco-eeacb38b.pth"))
     detector.loadModel()
 
     detector.detectObjectsFromVideo(
